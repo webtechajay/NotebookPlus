@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Movies;
+use App\Industry;
+use App\MovieType;
+use DB;
 
 class MovieController extends Controller
 {
@@ -16,13 +19,18 @@ class MovieController extends Controller
 
     public function create()
     {
-    	return view('admin.movies.create');
+      $Industries = Industry::all();
+      $movieTypes = MovieType::all();
+    	return view('admin.movies.create',compact('Industries', 'movieTypes'));
     }
 
     public function store(Request $request)
     {
     	$storeMovies = new Movies();
-    	$storeMovies->movie_name = $request->movie_name;
+    	$storeMovies->industry_id = $request->industry_id;
+      $storeMovies->movie_type_id = $request->movie_type_id;
+      $storeMovies->movie_title = $request->movie_title;
+      $storeMovies->movie_name = $request->movie_name;
 
     	if($request->hasfile('movie_photo')){
           $img_tmp = $request->file('movie_photo');
@@ -99,6 +107,7 @@ class MovieController extends Controller
     public function update(Request $request, $movie)
     {
       $updateMovies = Movies::find($movie);
+      $updateMovies->movie_title = $request->movie_title;
       $updateMovies->movie_name = $request->movie_name;
 
       if($request->hasfile('movie_photo')){
@@ -165,5 +174,33 @@ class MovieController extends Controller
       $deleteMovies = Movies::find($movie);
       $deleteMovies->delete();
       return redirect('/admin/view_movie');
+    }
+
+    public  function showRecentlyAddMovies()
+    {
+      $showRecentlyAddMovies = Movies::all();
+      return view('admin.movies.show_recent_add_movies',compact('showRecentlyAddMovies'));
+    }
+
+    public function showBollywoodRomanceMovies()
+    {
+      $bollywooodRomanceMovies = DB::select(" select movies.movie_name, movies.movie_photo,movies.id from movies
+        left join movie_types
+        on movies.movie_type_id = movie_types.id
+        left join industries
+        on movies.industry_id = industries.id
+        where industries.industry_name='Bollywood' && movie_types.movie_type_name
+        ='Romance'");
+      return view('admin.movies.bollywood_romance_movies',compact('bollywooodRomanceMovies'));
+    }
+
+    public function showHollywoodActionMovies()
+    {
+      $hollywooodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies left join
+movie_types on movies.movie_type_id = movie_types.id
+left join industries on movies.industry_id = industries.id
+where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action'");
+
+      return view('admin.movies.hollywood_action_movies',compact('hollywooodActionMovies'));
     }
 }

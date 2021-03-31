@@ -18,6 +18,7 @@
                   <thead>
                   <tr>
                     <th>Id</th>
+                    <th>Movie Title</th>
                     <th>Movie Name</th>
                     <th>Movie photo</th>
                     <th>Movie Desc</th>
@@ -31,20 +32,29 @@
                     @foreach($viewMovies as $key=>$movies)
                   <tr>
                     <td>{{$key+1}}</td>
+                    <td>{{str_limit($movies->movie_title, 5)}}</td>
                     <td>{{$movies->movie_name}}</td>
                     <td>
           @if(!empty($movies->movie_photo))
           <img src="{{asset('/uploads/movie_photo/'.$movies->movie_photo)}}" alt="" style="width:50px;">
           @endif
                     </td>
-                    <td>{{$movies->movie_desc}}</td>
-                    <td>{{$movies->movie_screen_short}}</td>
-                    <td>{{$movies->movie_dawnload_photo}}</td>
-                    <td>{{$movies->movie_source}}</td>
+                    <td>{{str_limit($movies->movie_desc,5)}}</td>
+                    <td>
+          @if(!empty($movies->movie_screen_short))
+          <img src="{{asset('/uploads/movie_screen_short/'.$movies->movie_screen_short)}}" alt="" style="width:50px;">
+          @endif
+                    </td>
+                    <td>
+          @if(!empty($movies->movie_dawnload_photo))
+          <img src="{{asset('/uploads/movie_dawnload_photo/'.$movies->movie_dawnload_photo)}}" alt="" style="width:50px;">
+          @endif
+                    </td>
+                    <td>{{str_limit($movies->movie_source,5)}}</td>
                     <td>
                       <a href="{{url('admin/edit_movie', $movies->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
                       <a href="{{url('admin/delete_movie', $movies->id)}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
-                      <a href="" class="btn btn-sm btn-secondary"><i class="fa fa-eye"></i></a>
+                      <!-- <a href="" class="btn btn-sm btn-secondary"><i class="fa fa-eye"></i></a> -->
                     </td>
                   </tr>
                   @endforeach

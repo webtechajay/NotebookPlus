@@ -18,6 +18,7 @@
 
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
+// =================================================================================================
 // NotebooksController
 
 // Route::get('/notebooks', 'NotebooksController@index');
@@ -28,22 +29,22 @@ Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middle
 // Route::delete('/notebooks/{notebooks}', 'NotebooksController@destroy')->name('notebooks.destroy');
 // Route::get('/notebooks/{notebooks}', 'NotebooksController@show')->name('notebooks.show');
 
-Route::resource('notebooks', 'NotebooksController');
+// Route::resource('notebooks', 'NotebooksController');1
 
 // NotesController
 
-Route::resource('notes', 'NotesController');
-Route::get('notes/{notebookId}/createNote', 'NotesController@createNote')->name('notes.createNote');
+// Route::resource('notes', 'NotesController');2
+// Route::get('notes/{notebookId}/createNote', 'NotesController@createNote')->name('notes.createNote');2
 
 // ImageController
 
-Route::get('/image', 'ImagesController@index');
-Route::get('/image/create', 'ImagesController@create');
-Route::post('/image', 'ImagesController@store');
-Route::get('/image/{image}', 'ImagesController@show')->name('image.show');
-Route::delete('/image/{image}', 'ImagesController@destroy')->name('image.destroy');
+// Route::get('/image', 'ImagesController@index');3
+// Route::get('/image/create', 'ImagesController@create');3
+// Route::post('/image', 'ImagesController@store');3
+// Route::get('/image/{image}', 'ImagesController@show')->name('image.show');3
+// Route::delete('/image/{image}', 'ImagesController@destroy')->name('image.destroy');3
 
-
+// =======================================================================================
 
 Route::group(['middleware'=>['is_admin']], function(){
 //Admin Panel
@@ -88,6 +89,9 @@ Route::get('/admin/delete_movie/{movie}', 'MovieController@destroy');
 
 //User side
 Route::get('/admin/show_movie/{movie}', 'MovieController@show')->name('movie.show');
+Route::get('/admin/show_recently_add_movies', 'MovieController@showRecentlyAddMovies');
+Route::get('/admin/show_bollywood_romance_movies', 'MovieController@showBollywoodRomanceMovies');
+Route::get('/admin/show_hollywood_action_movies', 'MovieController@showHollywoodActionMovies');
 
 
 Auth::routes(['verify' => true]);

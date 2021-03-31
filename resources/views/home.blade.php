@@ -8,14 +8,14 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="jumbotron">
-               <!-- <img src="{{asset('images/wlc.jpg')}}"> -->
-               <center><h1>NBP</h1></center>
+               <!-- <img src="{{asset('images/wlc.jpg')}}" width="20%" height="1%"> -->
+               <center><strong style="font-size:30px;font-weight:300px;">We can dawnload movies , add notebooks with  notes and add image also like gallary ! !</strong></center>
             </div>
         </div>
     </div>
 </div>
 
-<section>
+<!-- <section>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -96,7 +96,7 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->
 
 <section>
     <div class="container mt-3">
@@ -105,15 +105,77 @@
             <div class="card">
             <div class="card-header">
                 Recently Added Movies
-               <!--  <div class="float-right">
-                    <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Add Movies</a></center>
-                </div> -->
+                <div class="float-right">
+                    <center><a href="{{url('admin/show_recently_add_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
+                </div>
             </div>
             </div>
             </div>
         </div>
         <div class="row">
                 @foreach($moviesImages as $movies)
+             <div style="margin:10px;" class="movie_name">
+             <div class="row">
+                <div class="col-sm-2">
+        <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
+      </div>
+            </div>
+            <div class=" col-sm-8 mt-2">
+            <strong style="font-style: italic;">{{$movies->movie_name}}</strong>
+            </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+            <div class="card">
+            <div class="card-header">
+                Bollywood Romance Movies
+                <div class="float-right">
+                    <center><a href="{{url('admin/show_bollywood_romance_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+                @foreach($bollywooodRomanceMovies as $movies)
+             <div style="margin:10px;" class="movie_name">
+             <div class="row">
+                <div class="col-sm-2">
+        <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
+      </div>
+            </div>
+            <div class=" col-sm-8 mt-2">
+            <strong style="font-style: italic;">{{$movies->movie_name}}</strong>
+            </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+            <div class="card">
+            <div class="card-header">
+                Hollywood Action Movies
+                <div class="float-right">
+                    <center><a href="{{url('admin/show_hollywood_action_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+                @foreach($hollywooodActionMovies as $movies)
              <div style="margin:10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">

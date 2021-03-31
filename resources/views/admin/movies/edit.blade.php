@@ -16,6 +16,10 @@
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
+                    <label for="movie_title">Movie Title</label>
+                    <input type="text" class="form-control" value="{{$editMovies->movie_title}}" id="movie_title" name="movie_title" placeholder="Enter Movie Title">
+                  </div>
+                  <div class="form-group">
                     <label for="movie_name">Movie Name</label>
                     <input type="text" class="form-control" value="{{$editMovies->movie_name}}" id="movie_name" name="movie_name" placeholder="Enter Movie Name">
                   </div>

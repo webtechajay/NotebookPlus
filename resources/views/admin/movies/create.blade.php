@@ -15,6 +15,30 @@
               <form method="post" action="{{url('admin/store_movie')}}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
+
+                <div class="form-group">
+                        <label>Industries</label>
+                        <select class="form-control" name="industry_id">
+                          <option>-----Select----</option>
+                          @foreach($Industries as $industry)
+                          <option value="{{$industry->id}}">{{$industry->industry_name}}</option>
+                          @endforeach
+                        </select>
+                </div>
+
+                <div class="form-group">
+                        <label>MovieType</label>
+                        <select class="form-control" name="movie_type_id">
+                          <option>-----Select----</option>
+                          @foreach($movieTypes as $movie_type)
+                          <option value="{{$movie_type->id}}">{{$movie_type->movie_type_name}}</option>
+                          @endforeach
+                        </select>
+                </div>
+                  <div class="form-group">
+                    <label for="movie_title">Movie Title</label>
+                    <input type="text" class="form-control" id="movie_title" name="movie_title" placeholder="Enter Movie Title">
+                  </div>
                   <div class="form-group">
                     <label for="movie_name">Movie Name</label>
                     <input type="text" class="form-control" id="movie_name" name="movie_name" placeholder="Enter Movie Name">
