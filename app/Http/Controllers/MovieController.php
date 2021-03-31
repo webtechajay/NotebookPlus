@@ -8,6 +8,8 @@ use App\Industry;
 use App\MovieType;
 use DB;
 
+
+
 class MovieController extends Controller
 {
 
@@ -203,4 +205,9 @@ where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'A
 
       return view('admin.movies.hollywood_action_movies',compact('hollywooodActionMovies'));
     }
+
+
+
+
+
 }

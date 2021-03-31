@@ -92,6 +92,7 @@ Route::get('/admin/show_movie/{movie}', 'MovieController@show')->name('movie.sho
 Route::get('/admin/show_recently_add_movies', 'MovieController@showRecentlyAddMovies');
 Route::get('/admin/show_bollywood_romance_movies', 'MovieController@showBollywoodRomanceMovies');
 Route::get('/admin/show_hollywood_action_movies', 'MovieController@showHollywoodActionMovies');
+Route::post('/admin/search_movies', 'HomeController@searchMovies');
 
 
 Auth::routes(['verify' => true]);

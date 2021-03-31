@@ -7,6 +7,8 @@ use App\Notebook;
 use DB;
 use App\Photo;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use App\Movies;
 
 class HomeController extends Controller
 {
@@ -51,8 +53,22 @@ movie_types on movies.movie_type_id = movie_types.id
 left join industries on movies.industry_id = industries.id
 where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action'");
 
-        
         return view('home',compact('notebooks', 'images','moviesImages','bollywooodRomanceMovies','hollywooodActionMovies'));
+    }
+
+
+    public function searchMovies()
+    {
+        $q = Input::get ( 'q' );
+        // dd($q);
+        if($q != ""){
+            $showMovies = Movies::where ( 'movies.id', 'LIKE', '%' . $q . '%' )->get();
+            if (count ( $showMovies ) > 0)
+                return view ( 'search_movies' )->withDetails ( $showMovies )->withQuery ( $q );
+            else
+                return view ( 'search_movies' )->withMessage ( 'No Details found. Try to search again !' );
+        }
+        return view ( 'search_movies' )->withMessage ( 'No Details found. Try to search again !' );
     }
 
      public function adminHome()
