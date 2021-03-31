@@ -45,7 +45,7 @@ Route::delete('/image/{image}', 'ImagesController@destroy')->name('image.destroy
 
 
 
-
+Route::group(['middleware'=>['is_admin']], function(){
 //Admin Panel
 
 //Admin Controller
@@ -80,12 +80,14 @@ Route::post('/admin/store_movie', 'MovieController@store');
 Route::get('/admin/edit_movie/{movie}', 'MovieController@edit');
 Route::post('/admin/update_movie/{movie}', 'MovieController@update');
 Route::get('/admin/delete_movie/{movie}', 'MovieController@destroy');
+
+
+
+
+});
+
+//User side
 Route::get('/admin/show_movie/{movie}', 'MovieController@show')->name('movie.show');
-
-
-
-
-
 
 
 Auth::routes(['verify' => true]);

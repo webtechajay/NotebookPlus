@@ -1,6 +1,9 @@
 @extends('layouts.app')
    
 @section('content')
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -111,13 +114,15 @@
         </div>
         <div class="row">
                 @foreach($moviesImages as $movies)
-             <div class="col-sm-6 col-md-3 mt-3">
-             <div>
-
+             <div style="margin:10px;" class="movie_name">
+             <div class="row">
+                <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
-      
+      </div>
             </div>
-            <strong>{{$movies->movie_name}}</strong>
+            <div class=" col-sm-8 mt-2">
+            <strong style="font-style: italic;">{{$movies->movie_name}}</strong>
+            </div>
             </div>
             @endforeach
         </div>
