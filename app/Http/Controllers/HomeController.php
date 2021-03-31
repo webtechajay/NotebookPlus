@@ -62,9 +62,10 @@ where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'A
         $q = Input::get ( 'q' );
         // dd($q);
         if($q != ""){
-            $showMovies = Movies::where ( 'movies.id', 'LIKE', '%' . $q . '%' )->get();
+            $showMovies = Movies::where ( 'movie_name','LIKE', '%' . $q . '%' )->get();
+            // dd($showMovies);
             if (count ( $showMovies ) > 0)
-                return view ( 'search_movies' )->withDetails ( $showMovies )->withQuery ( $q );
+                return view ( 'search_movies',compact('showMovies') )->withDetails ( $showMovies )->withQuery ( $q );
             else
                 return view ( 'search_movies' )->withMessage ( 'No Details found. Try to search again !' );
         }

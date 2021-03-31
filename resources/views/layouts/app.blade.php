@@ -39,7 +39,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                    <form class="form-inline my-2 my-lg-0" action="{{url('admin/search_movies')}}" method="post">
+                    <form class="form-inline my-2 my-lg-0" action="{{url('search_movies')}}" method="post">
                         {{ csrf_field() }}
                       <input class="form-control mr-sm-2" type="search" placeholder="Enter Here" aria-label="Search" name="q">
                       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
