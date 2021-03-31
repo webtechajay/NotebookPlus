@@ -95,4 +95,33 @@
     </div>
 </section>
 
+<section>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+            <div class="card">
+            <div class="card-header">
+                Recently Added Movies
+               <!--  <div class="float-right">
+                    <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Add Movies</a></center>
+                </div> -->
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+                @foreach($moviesImages as $movies)
+             <div class="col-sm-6 col-md-3 mt-3">
+             <div>
+
+        <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
+      
+            </div>
+            <strong>{{$movies->movie_name}}</strong>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 @endsection

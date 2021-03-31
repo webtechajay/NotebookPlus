@@ -30,12 +30,13 @@ class HomeController extends Controller
         $user = Auth::user();
         $notebooks = $user->notebooks;
         $images = $user->images;
+        $moviesImages = DB::Select("select movie_photo,movie_name,id from movies");
         // $notebooks = DB::Select("SELECT * FROM nbp.notebooks order by id desc;");
 
         
         // $images = DB::Select("SELECT * FROM nbp.photos order by id desc;");
         // dd($images);
-        return view('home',compact('notebooks', 'images'));
+        return view('home',compact('notebooks', 'images','moviesImages'));
     }
 
      public function adminHome()

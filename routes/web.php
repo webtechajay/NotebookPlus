@@ -74,8 +74,13 @@ Route::get('/admin/show_movie_type/{movietype}', 'MovieTypeController@show');
 
 //Movies Model
 
+Route::get('/admin/view_movie', 'MovieController@index');
 Route::get('/admin/create_movie', 'MovieController@create');
 Route::post('/admin/store_movie', 'MovieController@store');
+Route::get('/admin/edit_movie/{movie}', 'MovieController@edit');
+Route::post('/admin/update_movie/{movie}', 'MovieController@update');
+Route::get('/admin/delete_movie/{movie}', 'MovieController@destroy');
+Route::get('/admin/show_movie/{movie}', 'MovieController@show')->name('movie.show');
 
 
 
