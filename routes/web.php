@@ -51,7 +51,7 @@ Route::group(['middleware'=>['is_admin']], function(){
 
 //Admin Controller
 
-Route::get('/admin/dashboard', 'AdminController@dashboard');
+Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
 
 //Industry Model
 
