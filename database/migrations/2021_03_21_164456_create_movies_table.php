@@ -20,7 +20,7 @@ class CreateMoviesTable extends Migration
             $table->string('movie_title')->nullable();
             $table->string('movie_name')->nullable();
             $table->string('movie_photo')->nullable();
-            $table->string('movie_desc')->nullable();
+            $table->text('movie_desc')->nullable();
             $table->string('movie_screen_short')->nullable();
             $table->string('movie_dawnload_photo')->nullable();
             $table->string('movie_source')->nullable();
