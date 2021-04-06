@@ -198,12 +198,22 @@ class MovieController extends Controller
 
     public function showHollywoodActionMovies()
     {
-      $hollywooodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies left join
+      $hollywoodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies left join
 movie_types on movies.movie_type_id = movie_types.id
 left join industries on movies.industry_id = industries.id
 where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action'");
 
-      return view('admin.movies.hollywood_action_movies',compact('hollywooodActionMovies'));
+      return view('admin.movies.hollywood_action_movies',compact('hollywoodActionMovies'));
+    }
+
+    public function showBollywoodActionMovies()
+    {
+      $BollywoodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies 
+left join movie_types on movies.movie_type_id = movie_types.id
+left join industries on movies.industry_id = industries.id
+where industries.industry_name = 'Bollywood' && movie_types.movie_type_name = 'Action'");
+
+      return view('admin.movies.bollywood_action_movies',compact('BollywoodActionMovies'));
     }
 
 
