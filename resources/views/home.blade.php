@@ -118,7 +118,7 @@
         </div>
         <div class="row">
                 @foreach($moviesImages as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row" >
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -150,7 +150,7 @@
         </div>
         <div class="row">
                 @foreach($BollywoodActionMovies as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -181,7 +181,7 @@
         </div>
         <div class="row">
                 @foreach($bollywooodRomanceMovies as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -212,7 +212,7 @@
         </div>
         <div class="row">
                 @foreach($BollywoodComedyMovies as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -243,7 +243,7 @@
         </div>
         <div class="row">
                 @foreach($hollywooodActionMovies as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -274,7 +274,7 @@
         </div>
         <div class="row">
                 @foreach($hollywoodRomanceMovies as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -305,7 +305,7 @@
         </div>
         <div class="row">
                 @foreach($hollywooodComedyMovies as $movies)
-             <div style="margin: 10px;padding:10px;" class="movie_name">
+             <div style="margin: 10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
