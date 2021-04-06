@@ -10,7 +10,7 @@
             <div class="col-md-12">
             <div class="card">
             <div class="card-header">
-               Bollywood Romance Movies
+               Bollywood Action Movies
                <!--  <div class="float-right">
                     <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Show More</a></center>
                 </div> -->

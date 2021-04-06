@@ -10,7 +10,7 @@
             <div class="col-md-12">
             <div class="card">
             <div class="card-header">
-               Bollywood Comedy Movies
+               Hollywood Comedy Movies
                <!--  <div class="float-right">
                     <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Show More</a></center>
                 </div> -->
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row">
-                @foreach($BollywoodComedyMovies as $movies)
+                @foreach($hollywoodComedyMovies as $movies)
              <div style="margin:10px;" class="movie_name">
              <div class="row">
                 <div class="col-sm-2">

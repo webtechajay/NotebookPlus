@@ -228,6 +228,28 @@ where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Come
     }
 
 
+    public function showHollywoodRomanceMovies()
+    {
+      $hollywoodRomanceMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+left join movie_types on movie_types.id = movies.movie_type_id
+left join industries on industries.id = movies.industry_id
+where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Romance'");
+
+      return view('admin.movies.hollywood_romance_movies',compact('hollywoodRomanceMovies'));
+    }
+
+
+    public function showHollywoodComedyMovies()
+    {
+      $hollywoodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+left join movie_types on movie_types.id = movies.movie_type_id
+left join industries on industries.id = movies.industry_id
+where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Comedy'");
+
+      return view('admin.movies.hollywood_comedy_movies',compact('hollywoodComedyMovies'));
+    }
+
+
 
 
 

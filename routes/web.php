@@ -94,6 +94,8 @@ Route::get('/admin/show_bollywood_romance_movies', 'MovieController@showBollywoo
 Route::get('/admin/show_bollywood_action_movies', 'MovieController@showBollywoodActionMovies');
 Route::get('/admin/show_bollywood_comedy_movies', 'MovieController@showBollywoodComedyMovies');
 Route::get('/admin/show_hollywood_action_movies', 'MovieController@showHollywoodActionMovies');
+Route::get('/admin/show_hollywood_romance_movies', 'MovieController@showHollywoodRomanceMovies');
+Route::get('/admin/show_hollywood_comedy_movies', 'MovieController@showHollywoodComedyMovies');
 
 
 Auth::routes(['verify' => true]);

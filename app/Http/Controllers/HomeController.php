@@ -63,7 +63,17 @@ where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Come
             left join industries on movies.industry_id = industries.id
             where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action'");
 
-        return view('home',compact('notebooks','images','moviesImages','bollywooodRomanceMovies','hollywooodActionMovies','BollywoodActionMovies','BollywoodComedyMovies'));
+        $hollywoodRomanceMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+left join movie_types on movie_types.id = movies.movie_type_id
+left join industries on industries.id = movies.industry_id
+where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Romance'");
+
+        $hollywooodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+left join movie_types on movie_types.id = movies.movie_type_id
+left join industries on industries.id = movies.industry_id
+where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Comedy'");
+
+        return view('home',compact('notebooks','images','moviesImages','bollywooodRomanceMovies','hollywooodActionMovies','BollywoodActionMovies','BollywoodComedyMovies','hollywoodRomanceMovies','hollywooodComedyMovies'));
     }
 
 
