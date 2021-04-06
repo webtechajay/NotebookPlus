@@ -38,7 +38,7 @@ class HomeController extends Controller
         $notebooks = $user->notebooks;
         $images = $user->images;
 
-        $moviesImages = DB::Select("select movie_photo,movie_name,id from movies");
+        $moviesImages = DB::Select("select movie_photo,movie_name,id from movies order by id desc limit 6");
         
             $bollywooodRomanceMovies = DB::select(" select movies.movie_name, movies.movie_photo,movies.id from movies
             left join movie_types
@@ -48,30 +48,30 @@ class HomeController extends Controller
             where industries.industry_name='Bollywood' && movie_types.movie_type_name
             ='Romance'");
 
-        $BollywoodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies 
-left join movie_types on movies.movie_type_id = movie_types.id
-left join industries on movies.industry_id = industries.id
-where industries.industry_name = 'Bollywood' && movie_types.movie_type_name = 'Action'");
+                $BollywoodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies 
+        left join movie_types on movies.movie_type_id = movie_types.id
+        left join industries on movies.industry_id = industries.id
+        where industries.industry_name = 'Bollywood' && movie_types.movie_type_name = 'Action' limit 6");
 
-        $BollywoodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
-left join movie_types on movie_types.id = movies.movie_type_id
-left join industries on industries.id = movies.industry_id
-where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Comedy'");
+                $BollywoodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+        left join movie_types on movie_types.id = movies.movie_type_id
+        left join industries on industries.id = movies.industry_id
+        where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Comedy' limit 6");
 
         $hollywooodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies left join
             movie_types on movies.movie_type_id = movie_types.id
             left join industries on movies.industry_id = industries.id
-            where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action'");
+            where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action' limit 6");
 
-        $hollywoodRomanceMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
-left join movie_types on movie_types.id = movies.movie_type_id
-left join industries on industries.id = movies.industry_id
-where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Romance'");
+                $hollywoodRomanceMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+        left join movie_types on movie_types.id = movies.movie_type_id
+        left join industries on industries.id = movies.industry_id
+        where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Romance' limit 6");
 
-        $hollywooodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
-left join movie_types on movie_types.id = movies.movie_type_id
-left join industries on industries.id = movies.industry_id
-where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Comedy'");
+                $hollywooodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
+        left join movie_types on movie_types.id = movies.movie_type_id
+        left join industries on industries.id = movies.industry_id
+        where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Comedy' limit 6");
 
         return view('home',compact('notebooks','images','moviesImages','bollywooodRomanceMovies','hollywooodActionMovies','BollywoodActionMovies','BollywoodComedyMovies','hollywoodRomanceMovies','hollywooodComedyMovies'));
     }
