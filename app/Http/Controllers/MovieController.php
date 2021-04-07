@@ -180,7 +180,7 @@ class MovieController extends Controller
 
     public  function showRecentlyAddMovies()
     {
-      $showRecentlyAddMovies = Movies::all();
+      $showRecentlyAddMovies = DB::select("select * from movies order by id desc");
       return view('admin.movies.show_recent_add_movies',compact('showRecentlyAddMovies'));
     }
 
@@ -192,7 +192,7 @@ class MovieController extends Controller
         left join industries
         on movies.industry_id = industries.id
         where industries.industry_name='Bollywood' && movie_types.movie_type_name
-        ='Romance'");
+        ='Romance' order by id desc");
       return view('admin.movies.bollywood_romance_movies',compact('bollywooodRomanceMovies'));
     }
 
@@ -201,7 +201,7 @@ class MovieController extends Controller
       $hollywoodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies left join
 movie_types on movies.movie_type_id = movie_types.id
 left join industries on movies.industry_id = industries.id
-where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action'");
+where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'Action' order by id desc ");
 
       return view('admin.movies.hollywood_action_movies',compact('hollywoodActionMovies'));
     }
@@ -211,7 +211,7 @@ where industries.industry_name = 'Hollywood' && movie_types.movie_type_name = 'A
       $BollywoodActionMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies 
 left join movie_types on movies.movie_type_id = movie_types.id
 left join industries on movies.industry_id = industries.id
-where industries.industry_name = 'Bollywood' && movie_types.movie_type_name = 'Action'");
+where industries.industry_name = 'Bollywood' && movie_types.movie_type_name = 'Action' order by id desc ");
 
       return view('admin.movies.bollywood_action_movies',compact('BollywoodActionMovies'));
     }
@@ -222,7 +222,7 @@ where industries.industry_name = 'Bollywood' && movie_types.movie_type_name = 'A
       $BollywoodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
 left join movie_types on movie_types.id = movies.movie_type_id
 left join industries on industries.id = movies.industry_id
-where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Comedy'");
+where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Comedy' order by id desc ");
 
       return view('admin.movies.bollywood_comedy_movies',compact('BollywoodComedyMovies'));
     }
@@ -233,7 +233,7 @@ where industries.industry_name ='Bollywood' && movie_types.movie_type_name='Come
       $hollywoodRomanceMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
 left join movie_types on movie_types.id = movies.movie_type_id
 left join industries on industries.id = movies.industry_id
-where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Romance'");
+where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Romance' order by id desc ");
 
       return view('admin.movies.hollywood_romance_movies',compact('hollywoodRomanceMovies'));
     }
@@ -244,7 +244,7 @@ where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Roma
       $hollywoodComedyMovies = DB::select("select movies.movie_name,movies.movie_photo,movies.id from movies
 left join movie_types on movie_types.id = movies.movie_type_id
 left join industries on industries.id = movies.industry_id
-where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Comedy'");
+where industries.industry_name ='Hollywood' && movie_types.movie_type_name='Comedy' order by id desc ");
 
       return view('admin.movies.hollywood_comedy_movies',compact('hollywoodComedyMovies'));
     }
