@@ -27,7 +27,7 @@
                     <center><a href="{{url('/notebooks/create')}}" class="btn btn-sm btn-primary">Add Notebook</a></center>
                 </div>
                 <div class="float-right" style="margin-right: 10px;">
-                    <center><a href="{{url('/notebooks')}}" class="btn btn-sm btn-primary">Show Notebook</a></center>
+                    <center><a href="{{url('/notebooks')}}" class="btn btn-sm btn-primary">Show Notebooks</a></center>
                 </div>
             </div>
             </div>
