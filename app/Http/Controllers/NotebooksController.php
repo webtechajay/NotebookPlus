@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Notebook;
 use Illuminate\Support\Facades\Auth;
 
+
 class NotebooksController extends Controller
 {
     public function index()
@@ -13,6 +14,7 @@ class NotebooksController extends Controller
         $user  = Auth::user();
         // dd($user);
         $notebooks = $user->notebooks;
+
         // dd($notebooks);
     	return view('notebooks.index')->with(compact('notebooks'));
     }
