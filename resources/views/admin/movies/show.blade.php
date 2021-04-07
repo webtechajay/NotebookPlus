@@ -3,10 +3,10 @@
 @section('content')
 
 <div class="container-fluid">
-        <div class="row">
+        <div class="row ">
             
           <center>  <div class="col-md-8">
-        <div>
+        <div class="card card-header">
         <h2>{{$showMovies->movie_title}}</h2>
         </div>
         <hr>
