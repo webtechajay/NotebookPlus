@@ -30,7 +30,7 @@ class ImagesController extends Controller
     public function store(Request $request)
     {
        request()->validate([
-            // 'profileImage.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            // 'profileImage.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100M',
        ]);
          
        if ($files = $request->file('profileImage')) {
