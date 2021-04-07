@@ -84,6 +84,9 @@
                 <div class="float-right">
                     <center><a href="{{url('image/create')}}" class="btn btn-sm btn-primary">Add Images</a></center>
                 </div>
+                <div class="float-right" style="margin-right: 10px;">
+                    <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Show Images</a></center>
+                </div>
             </div>
             </div>
             </div>
