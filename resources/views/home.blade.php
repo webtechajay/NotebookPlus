@@ -116,16 +116,16 @@
             </div>
             </div>
         </div>
-        <div class="row ">
+        <div class="row justify-content-center">
                 @foreach($moviesImages as $movies)
-             <div style="margin:10px;" class="movie_name">
+             <div style="margin:10px;width:150px;height:330px;" class="card">
              <div class="row" >
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
       </div>
             </div>
             <div class=" col-sm-8 mt-2">
-            <strong style="font-style: italic;">{{$movies->movie_name}}</strong>
+            <strong style="font-style:italic;display:flex;flex-wrap:wrap;">{{$movies->movie_name}}</strong>
             </div>
             </div>
             @endforeach
@@ -148,9 +148,9 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
                 @foreach($BollywoodActionMovies as $movies)
-             <div style="margin: 10px;" class="movie_name">
+             <div style="margin: 10px;width:150px;height:330px;" class="movie_name card">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -179,9 +179,9 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
                 @foreach($bollywooodRomanceMovies as $movies)
-             <div style="margin: 10px;" class="movie_name">
+             <div style="margin: 10px;width:150px;height:330px;" class="movie_name card">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -210,9 +210,9 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
                 @foreach($BollywoodComedyMovies as $movies)
-             <div style="margin: 10px;" class="movie_name">
+             <div style="margin: 10px;width:150px;height:330px;" class="movie_name card">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -241,11 +241,11 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
                 @foreach($hollywooodActionMovies as $movies)
-             <div style="margin: 10px;" class="movie_name">
+             <div style="margin:10px;width:150px;height:330px;" class="movie_name card">
              <div class="row">
-                <div class="col-sm-2">
+            <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
       </div>
             </div>
@@ -272,9 +272,9 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
                 @foreach($hollywoodRomanceMovies as $movies)
-             <div style="margin: 10px;" class="movie_name">
+             <div style="margin:10px;width:150px;height:330px;" class="movie_name card">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>
@@ -303,9 +303,9 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
                 @foreach($hollywooodComedyMovies as $movies)
-             <div style="margin: 10px;" class="movie_name">
+             <div style="margin: 10px;width:150px;height:330px;" class="movie_name card">
              <div class="row">
                 <div class="col-sm-2">
         <a href="{{route('movie.show', $movies->id)}}"><img src="{{url('uploads/movie_photo', $movies->movie_photo)}}" alt="Image"/ width="150"></a>

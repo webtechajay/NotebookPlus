@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app" class="container" >
+    <div id="app" class="container">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color:black;">
             <div class="container">
                 <a class="navbar-brand" style="color: white;" href="{{ url('/') }}">
