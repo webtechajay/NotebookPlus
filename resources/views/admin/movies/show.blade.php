@@ -16,7 +16,7 @@
         <div>
             <div class="row justify-content-center">
                 <div class="col-md-4">
-            <h3 class="mt-2 card" style="background-color: black;color: white;font-style: italic;">Desc:</h3>
+            <h4 class="mt-2 card" style="background-color: black;color: white;font-style: italic;">Desc:</h4>
             </div>
             </div>
             <!-- <hr> -->
@@ -29,7 +29,7 @@
         <!-- <hr> -->
          <div class="row justify-content-center">
                 <div class="col-md-6">
-            <h3 class="mt-2 card" style="background-color: black;color: white;font-style: italic;">Screen Short Movie Clip:</h3>
+            <h4 class="mt-2 card" style="background-color: black;color: white;font-style: italic;">Screen Short Movie Clip:</h4>
             </div>
             </div>
         <div class="mt-2">
