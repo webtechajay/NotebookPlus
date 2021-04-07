@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header" style="background-color:black;color: white;">
 						Notes
 						<div class="float-right">
 							<a href="{{route('notes.createNote', $notebook->id)}}" class="btn btn-sm btn-primary">Add Note</a>

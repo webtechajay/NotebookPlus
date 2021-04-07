@@ -6,7 +6,7 @@
 	
     <div class="row">
         <div class="col-md-12">
-    	<div class="card card-header">
+    	<div class="card card-header" style="background-color:black;color: white;">
         <h3 class="display-3">
 
             {{$note->title}}

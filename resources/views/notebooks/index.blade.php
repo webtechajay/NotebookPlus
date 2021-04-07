@@ -8,7 +8,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header" style="background-color:black;color: white;">
 						Notebooks
 						<div class="float-right">
 							<a href="{{url('/notebooks/create')}}" class="btn btn-sm btn-primary">Add NoteBook</a>

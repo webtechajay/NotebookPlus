@@ -8,9 +8,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="jumbotron">
+            <div class="jumbotron" style="background-color: black;">
                <!-- <img src="{{asset('images/wlc.jpg')}}" width="20%" height="1%"> -->
-               <center><strong style="font-size:30px;font-weight:300px;">We can dawnload movies , add notebooks with  notes and add image also like gallary ! !</strong></center>
+               <center><strong style="font-size:40px;font-weight:1500;color: white;"><marquee>NoteBookPlus</marquee></strong></center>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                 Recently Added Notebook
                 <div class="float-right">
                     <center><a href="{{url('/notebooks/create')}}" class="btn btn-sm btn-primary">Add Notebook</a></center>
@@ -79,7 +79,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                 Recently Added Images
                 <div class="float-right">
                     <center><a href="{{url('image/create')}}" class="btn btn-sm btn-primary">Add Images</a></center>
@@ -107,7 +107,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                 Recently Added Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_recently_add_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
@@ -139,7 +139,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
               Bollywood Action Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_bollywood_action_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
@@ -169,8 +169,8 @@
     <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="col-md-12">
-            <div class="card">
-            <div class="card-header">
+            <div class="card" >
+            <div class="card-header" style="background-color:black;color: white;">
                 Bollywood Romance Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_bollywood_romance_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
@@ -200,8 +200,8 @@
     <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="col-md-12">
-            <div class="card">
-            <div class="card-header">
+            <div class="card" >
+            <div class="card-header" style="background-color:black;color: white;">
                 Bollywood Comedy Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_bollywood_comedy_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
@@ -232,7 +232,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                 Hollywood Action Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_hollywood_action_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
@@ -263,7 +263,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                 Hollywood Romance Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_hollywood_romance_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>
@@ -294,7 +294,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                 Hollywood Comedy Movies
                 <div class="float-right">
                     <center><a href="{{url('admin/show_hollywood_comedy_movies')}}" class="btn btn-sm btn-primary">Show More</a></center>

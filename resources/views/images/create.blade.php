@@ -17,10 +17,10 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
             <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color:black;color: white;">
                Images
                 <div class="float-right">
-                    <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Add Images</a></center>
+                    <center><a href="{{url('image')}}" class="btn btn-sm btn-primary">Images</a></center>
                 </div>
             </div>
             </div>

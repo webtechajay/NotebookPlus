@@ -17,7 +17,7 @@
 			<div class="col-md-12">
 
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header" style="background-color:black;color: white;">
 						Add Note
 					</div>
 				</div>

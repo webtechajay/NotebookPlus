@@ -1,8 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Edit Note</h1>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" style="background-color:black;color: white;">
+                        Edit Notes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+<div class="container mt-3">
+    <!-- <h1>Edit Note</h1> -->
 
     <form method="post" action="{{route('notes.update', $note->id)}}">
         {{ csrf_field()}}
@@ -26,5 +43,6 @@
 
     </form>
 </div>
+</section>
 
 @endsection

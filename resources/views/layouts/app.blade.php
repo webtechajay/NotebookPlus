@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app" class="container" >
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color:#5E5E5E;">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color:black;">
             <div class="container">
                 <a class="navbar-brand" style="color: white;" href="{{ url('/') }}">
                     {{ config('app.name', 'NBP') }}
