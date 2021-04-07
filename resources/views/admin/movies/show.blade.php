@@ -6,7 +6,7 @@
         <div class="row ">
             
           <center>  <div class="col-md-8">
-        <div class="card card-header">
+        <div class="card card-header" style="background-color: black;color: white;">
         <h2>{{$showMovies->movie_title}}</h2>
         </div>
         <hr>
@@ -14,12 +14,25 @@
                 <img src="{{url('uploads/movie_photo', $showMovies->movie_photo)}}" width="200">
             </div>
         <div>
-            <h3 class="mt-2">Desc</h3>
-            <hr>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+            <h3 class="mt-2 card" style="background-color: black;color: white;font-style: italic;">Desc:</h3>
+            </div>
+            </div>
+            <!-- <hr> -->
+            <div class=" row justify-content-center card card-header">
+                <div class="col-md-12">
             <strong>{{$showMovies->movie_desc}}</strong>
+            </div>
+            </div>
         </div>
-        <hr>
-        <div class="mt-3">
+        <!-- <hr> -->
+         <div class="row justify-content-center">
+                <div class="col-md-6">
+            <h3 class="mt-2 card" style="background-color: black;color: white;font-style: italic;">Screen Short Movie Clip:</h3>
+            </div>
+            </div>
+        <div class="mt-2">
            <img src="{{url('uploads/movie_screen_short', $showMovies->movie_screen_short)}}" width="600"> 
         </div>
         <hr>
